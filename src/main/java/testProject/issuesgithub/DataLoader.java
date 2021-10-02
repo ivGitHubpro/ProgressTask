@@ -8,7 +8,8 @@ import java.util.Properties;
 public class DataLoader {
 	private static final String RESOURCE_CUSTOMERS_PROPERTY = "Properties/";
 	private Properties properties;
-	private final String token;
+	private final String tokenPartOne;
+	private final String tokenPartTwo;
 
 	public DataLoader() {
 		properties = new Properties();
@@ -22,10 +23,16 @@ public class DataLoader {
 			e.printStackTrace();
 		}
 
-		this.token = Objects.requireNonNull(properties.getProperty("token"));
+		this.tokenPartOne = Objects.requireNonNull(properties.getProperty("tokenPartOne"));
+		this.tokenPartTwo = Objects.requireNonNull(properties.getProperty("tokenPartTwo"));
+
 	}
 
-	public String getToken() {
-		return token;
+	public String getTokenPartOne() {
+		return tokenPartOne;
+	}
+	
+	public String getTokenPartTwo() {
+		return tokenPartTwo;
 	}
 }
