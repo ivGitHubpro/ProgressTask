@@ -18,7 +18,7 @@ import jsonRequests.IssueParameters;
  */
 public class BackendCalls {
 	private static final String URL = "https://api.github.com/repos/progressim/progressrepo/issues";
-	private static final String TOKEN = "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";
+	private static final String TOKEN = "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";
 	private static final String STATUS_CREATED = "201 Created";
 	private static final String STATUS_OK = "200 OK";
 	private static final int FIRST_INDEX_STATUS = 0;
