@@ -27,9 +27,7 @@ public class BackendCalls {
 	
 	
 	private RestClient restOperations = new RestClient();
-	private String gitTokenPartOne = dataLoader.getTokenPartOne();
-	private String gitTokenPartTwo = dataLoader.getTokenPartTwo();
-	private String gitToken = gitTokenPartOne+gitTokenPartTwo;
+	private String gitToken = dataLoader.getToken();
 	/** 
 	 * API method for creation an issue
 	 * @param title - title of the issue
