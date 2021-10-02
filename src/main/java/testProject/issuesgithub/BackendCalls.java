@@ -18,14 +18,16 @@ import jsonRequests.IssueParameters;
  */
 public class BackendCalls {
 	private static final String URL = "https://api.github.com/repos/progressim/progressrepo/issues";
-	private static final String TOKEN = "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";
 	private static final String STATUS_CREATED = "201 Created";
 	private static final String STATUS_OK = "200 OK";
 	private static final int FIRST_INDEX_STATUS = 0;
 	private static final int SECOND_INDEX_RESPONSE_BODY = 1;
 	
-	private RestClient restOperations = new RestClient();
+	private final DataLoader dataLoader = new DataLoader();
 	
+	
+	private RestClient restOperations = new RestClient();
+	private String gitToken = dataLoader.getToken();
 	/** 
 	 * API method for creation an issue
 	 * @param title - title of the issue
@@ -33,7 +35,7 @@ public class BackendCalls {
 	 * @return the issue number in String
 	 */
 	public String createIssue(String title,String body) {
-		
+		System.out.println("gitToken IS: " + gitToken);
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
         IssueParameters createIssue = new IssueParameters();
@@ -42,7 +44,7 @@ public class BackendCalls {
 		String createIssueBody = gson.toJson(createIssue);
 		List<String> responseDetails = new ArrayList<String>(); 
 		try {
-			responseDetails = restOperations.sendPostRequest(URL, createIssueBody, TOKEN);
+			responseDetails = restOperations.sendPostRequest(URL, createIssueBody, gitToken);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -88,7 +90,7 @@ public class BackendCalls {
 	public List<String> getAllIssues() {
 		List<String> responseDetails = new ArrayList<String>();
 		try {
-			responseDetails = restOperations.sendGetRequest(URL, TOKEN);
+			responseDetails = restOperations.sendGetRequest(URL, gitToken);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -108,7 +110,7 @@ public class BackendCalls {
 	 */
 	public void lockIssue(String numberId) {
 		try {
-			restOperations.sendPutRequest(URL + "/" + numberId + "/lock", TOKEN);
+			restOperations.sendPutRequest(URL + "/" + numberId + "/lock", gitToken);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -121,7 +123,7 @@ public class BackendCalls {
 	 */
 	public void unlockIssue(String numberId) {
 		try {
-			restOperations.sendDeleteRequest(URL + "/" + numberId + "/lock", TOKEN);
+			restOperations.sendDeleteRequest(URL + "/" + numberId + "/lock", gitToken);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -142,7 +144,7 @@ public class BackendCalls {
 		String issueBody = gson.toJson(editIssue);
 		List<String> responseDetails = new ArrayList<String>(); 
 		try {
-			responseDetails = restOperations.sendPatchRequest(URL + "/" + numberId, issueBody, TOKEN);
+			responseDetails = restOperations.sendPatchRequest(URL + "/" + numberId, issueBody, gitToken);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -174,7 +176,7 @@ public class BackendCalls {
 	private String getResponseForIssue(String numberId) {
 		List<String> responseDetails = new ArrayList<String>();
 		try {
-			responseDetails = restOperations.sendGetRequest(URL + "/" + numberId, TOKEN);
+			responseDetails = restOperations.sendGetRequest(URL + "/" + numberId, gitToken);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
