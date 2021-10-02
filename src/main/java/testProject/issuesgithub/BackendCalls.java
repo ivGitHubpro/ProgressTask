@@ -37,7 +37,6 @@ public class BackendCalls {
 	 * @return the issue number in String
 	 */
 	public String createIssue(String title,String body) {
-		System.out.println("gitToken IS: " + gitToken);
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
         IssueParameters createIssue = new IssueParameters();
