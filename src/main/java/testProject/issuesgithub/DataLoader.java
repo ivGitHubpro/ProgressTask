@@ -28,11 +28,10 @@ public class DataLoader {
 
 	}
 
-	public String getTokenPartOne() {
-		return tokenPartOne;
-	}
+
 	
-	public String getTokenPartTwo() {
-		return tokenPartTwo;
+	
+	public String getToken() {
+		return tokenPartOne+tokenPartTwo;
 	}
 }
