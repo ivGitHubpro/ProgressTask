@@ -18,7 +18,9 @@ public void setUp() {
 	setup();
 	mainPage = new MainPage(driver);
 }
-
+/**
+ * Test if the correct page is opened
+ */
 @Test
 public void verifyUserOnCorrectPage() {
 	mainPage.openURL(URL);
