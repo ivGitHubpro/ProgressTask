@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="backendTests" duration-ms="4161" started-at="2021-10-02T06:51:15Z" finished-at="2021-10-02T06:51:19Z">
+    <groups>
+    </groups>
+    <test name="backendTests" duration-ms="4161" started-at="2021-10-02T06:51:15Z" finished-at="2021-10-02T06:51:19Z">
+      <class name="backend.tests.IssuesTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:backend.tests.IssuesTests@62ee68d8]" name="setUp" is-config="true" duration-ms="932" started-at="2021-10-02T09:51:15Z" finished-at="2021-10-02T09:51:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getAllIssues()[pri:0, instance:backend.tests.IssuesTests@62ee68d8]" name="getAllIssues" duration-ms="907" started-at="2021-10-02T09:51:16Z" finished-at="2021-10-02T09:51:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllIssues -->
+        <test-method status="PASS" signature="getIssueByIssueNumber()[pri:0, instance:backend.tests.IssuesTests@62ee68d8]" name="getIssueByIssueNumber" duration-ms="318" started-at="2021-10-02T09:51:17Z" finished-at="2021-10-02T09:51:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getIssueByIssueNumber -->
+        <test-method status="PASS" signature="lockAndUnlockIssue()[pri:0, instance:backend.tests.IssuesTests@62ee68d8]" name="lockAndUnlockIssue" duration-ms="1484" started-at="2021-10-02T09:51:17Z" finished-at="2021-10-02T09:51:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lockAndUnlockIssue -->
+        <test-method status="PASS" signature="closeIssue()[pri:1, instance:backend.tests.IssuesTests@62ee68d8]" name="closeIssue" duration-ms="516" started-at="2021-10-02T09:51:19Z" finished-at="2021-10-02T09:51:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeIssue -->
+      </class> <!-- backend.tests.IssuesTests -->
+    </test> <!-- backendTests -->
+  </suite> <!-- backendTests -->
+</testng-results>

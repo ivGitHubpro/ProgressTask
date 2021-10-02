@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [backendTests]">
+	<test name="backendTests(failed)">
+		<classes>
+			<class name="backend.tests.IssuesTests">
+				<methods>
+					<include name="setUp" />
+					<include name="getAllIssues" />
+				</methods>
+			</class> <!-- backend.tests.IssuesTests -->
+		</classes>
+	</test> <!-- backendTests(failed) -->
+</suite> <!-- Failed suite [backendTests] -->
