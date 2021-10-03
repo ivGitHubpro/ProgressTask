@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Objects;
 import java.util.Properties;
-
+/**
+ * Data loader class to load properties
+ */
 public class DataLoader {
 	private static final String RESOURCE_CUSTOMERS_PROPERTY = "Properties/";
 	private Properties properties;

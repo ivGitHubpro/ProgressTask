@@ -12,6 +12,9 @@ import issues.pageobjects.MainPage;
 import junit.framework.Assert;
 import testProject.issuesgithub.DriverDefinition;
 
+/**
+ * Test Frontend class
+ */
 public class IssuesFrontendTests extends DriverDefinition {
 
     private static final String ISSUES_TITLE = "Issues";

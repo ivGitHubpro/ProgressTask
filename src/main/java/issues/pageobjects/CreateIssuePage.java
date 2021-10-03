@@ -6,6 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+/**
+ * Page Object for Create Issue Page
+ */
 public class CreateIssuePage {
     @FindBy(how = How.XPATH, using = "//input[@id='issue_title']")
     private WebElement issueTitle;

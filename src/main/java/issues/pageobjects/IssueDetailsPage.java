@@ -9,7 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
+/**
+ * Page Object for Issue Detail Page
+ */
 public class IssueDetailsPage {
 
     @FindBy(how = How.XPATH, using = "//span[@class='js-issue-title markdown-title']")

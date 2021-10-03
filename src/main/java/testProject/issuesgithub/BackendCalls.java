@@ -12,7 +12,7 @@ import com.jayway.jsonpath.JsonPath;
 
 import jsonRequests.IssueParameters;
 /**
- * Class that contains implementation of API calls for issues
+ * Class that contains implementation of API calls for issues in gitHub
  * @author ivanka.miovska
  *
  */

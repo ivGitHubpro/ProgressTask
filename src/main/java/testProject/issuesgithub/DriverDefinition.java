@@ -6,6 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
+/**
+ * Driver definition class
+ */
 public class DriverDefinition {
 
 	public WebDriver driver;

@@ -8,7 +8,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+/**
+ * Page Object for Main Issue Page
+ */
 public class MainPage {
     @FindBy(how = How.XPATH, using = "//div/a[contains(text(),'Sign in')]")
     private WebElement signInButton;

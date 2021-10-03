@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-
+/**
+ * Page Object for Login github
+ */
 public class LogInPage {
 
     @FindBy(how = How.XPATH, using = "//input[@id='login_field']")
